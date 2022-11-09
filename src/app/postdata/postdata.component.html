@@ -1,0 +1,33 @@
+<form #frm="ngForm" (ngSubmit)="onSubmit(frm)">
+    <table>
+        <tr>
+            <td>
+                <div>
+                    <label for="name">Name</label>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <input type="text" id="name" name="name" ngModel />
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div>
+                    <label for="job">Job</label>
+                </div>
+            </td>
+            <td>
+                <div>
+                    <input type="text" id="job" name="job" ngModel />
+                </div>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <button type="submit" class="btn btn-primary">Submit</button>
+        <div *ngIf="isSubmitted(frm)">
+            <p>Name {{frm.value.name}} and Job {{frm.value.job}} submitted succesfully</p>
+        </div>
+</form>
