@@ -13,7 +13,6 @@ export class UserdataComponent implements OnInit {
 
   ngOnInit(): void {
     this.userdataService.getData().subscribe((data) => {
-      console.log(data);
       this.users = data;
     });
   }
